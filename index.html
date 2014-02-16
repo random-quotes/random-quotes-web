@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>idealhack’s quotes</title>
+  <meta charset="utf-8">
+  <meta name="description" content="idealhack’s quotes collection">
+  <link href="style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+  <p class="quote">
+    <span class="body"></span> ― 
+    <span class="author"></span>
+    <cite class="source"></cite>
+  </p>
+
+  <script src="zepto.min.js"></script>
+  <script>
+    $.getJSON('http://random-quotes.herokuapp.com/', function (data) {
+      $('.body').text(data.body)
+      $('.author').text(data.author)
+      $('.source').text(data.source)
+      $('.quote').show()
+    })
+  </script>
+
+</body>
+</html>
+
+<!-- Powered by GitHub Pages -->
